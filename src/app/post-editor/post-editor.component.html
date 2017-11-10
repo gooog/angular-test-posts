@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>სათაური</th>
+    <th>სურათ</th>
+    <th>ტექსტი</th>
+    <th>--</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let post of posts; let i = index">
+    <th scope="row">{{ i+1 }}</th>
+    <td>{{ post.title }}</td>
+    <td><img src="{{ post.img }}" height="80" alt=""></td>
+    <td><div class="text">{{ post.text }}</div></td>
+    <td><button class="btn btn-primary" [routerLink]="['/edit', i]">რედ.</button> <button class="btn btn-danger">x</button></td>
+  </tr>
+  </tbody>
+</table>

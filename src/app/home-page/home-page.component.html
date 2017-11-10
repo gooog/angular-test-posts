@@ -1,0 +1,9 @@
+<div class="row post-container" *ngFor="let post of posts;">
+  <div class="col-sm-4">
+    <img src="{{post.img}}" alt="">
+  </div>
+  <div class="col-sm-8">
+    <div class="title">{{ post.title }}</div>
+    <div class="text">{{ post.text }}</div>
+  </div>
+</div>
